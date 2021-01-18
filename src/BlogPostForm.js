@@ -1,4 +1,6 @@
-// import React,{useState} from 'react';
+//This FILE IS NOT NEEDED. 
+
+//import React,{useState} from 'react';
 // import { StyleSheet, Text, View,TextInput,Button } from 'react-native';
 
 // const BlogPostForm = () => {
