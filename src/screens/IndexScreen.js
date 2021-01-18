@@ -1,11 +1,25 @@
-import React,{useContext} from 'react'; 
+import React,{useCallback, useContext,useEffect} from 'react'; 
 import { StyleSheet, Text, View, FlatList,Button,TouchableOpacity } from 'react-native';
 import {Context} from '../context/BlogContext';
 import {Feather} from '@expo/vector-icons';
 
 
 const IndexScreen = ({navigation}) => {
-    const {state,deleteBlogPosts} = useContext(Context);
+    const {state,deleteBlogPosts, getBlogPosts} = useContext(Context);
+
+    //used to make sure getBlogposts is called only once otherwise we are gonna end up calling getblogposts everytime state
+    //changes and rerenders indexscreen and causes and infinte loop
+    useEffect(()=> {
+      getBlogPosts();
+      //below code ensures to call getblogposts everytime we come back to indexscreen
+      navigation.addListener('didFocus',()=>{
+        getBlogPosts();
+      });
+      return () => {
+        listener.remove();
+      }
+    }, [])
+
   return (
     <View style={styles.container}>
       <FlatList

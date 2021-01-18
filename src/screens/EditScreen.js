@@ -14,7 +14,7 @@ const EditScreen = ({navigation}) => {
     //     <Text style={styles.label}>{navigation.getParam('id')}</Text> 
     // </View>
     <View style={styles.container}>
-    <Text style={styles.label} marginTop= '30'>Edit Title</Text>
+    <Text style={styles.label} marginTop= '50'>Edit Title</Text>
     <TextInput style={styles.input} value={title} onChangeText={(text1)=>setTitle(text1)}></TextInput>
     <Text style={styles.label}>Edit Content</Text>
     <TextInput style={styles.input} value={content} onChangeText={(text2)=>setContent(text2)}></TextInput>
