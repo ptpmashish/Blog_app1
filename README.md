@@ -24,8 +24,8 @@ Above step will install all dependencies for this project.
 Json Server and NGROK : 
 
 1. outside project folder, create another folder JsonServer"
-2 Run "npm init"
-3 next install jsonServer and Ngrok using "npm install json-server ngrok" 
+2.  Run "npm init"
+3.  next install jsonServer and Ngrok using "npm install json-server ngrok" 
 4 (you can read more here if you need to. https://www.npmjs.com/package/json-server.  https://ngrok.com/product ) 
 5 create a new file db.json inside above folder. write this line inside the file. make sure you have the double qoutations mentioned in this line  
 '{ "blogposts":[] }'  and save
